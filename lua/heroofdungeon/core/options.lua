@@ -1,42 +1,36 @@
-local opt = vim.opt;
+vim.opt.relativenumber = true
+vim.opt.number = true
+vim.opt.wrap = false
+vim.opt.cursorline = true
 
-opt.relativenumber = true;
-opt.number = true;
-opt.wrap = false;
-opt.cursorline = true;
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.opt.smartindent = true
 
-opt.tabstop = 2;
-opt.softtabstop = 2;
-opt.shiftwidth = 2;
-opt.expandtab = true;
-opt.smartindent = true;
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
 
-opt.swapfile = false;
-opt.backup = false;
-opt.undodir = os.getenv('HOME') .. '/.vim/undodir';
-opt.undofile = true;
+vim.opt.scrolloff = 4
 
-opt.scrolloff = 4;
+vim.opt.updatetime = 50
 
-opt.updatetime = 50;
+vim.opt.termguicolors = true
+vim.opt.isfname:append("@-@")
 
-opt.termguicolors = true;
-opt.isfname:append('@-@');
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
 
-opt.ignorecase = true;
-opt.smartcase = true;
-opt.hlsearch = false;
-opt.incsearch = true;
+vim.opt.iskeyword:append("-")
+vim.opt.autochdir = false
+vim.opt.path:append("**")
 
-opt.iskeyword:append('-');
-opt.autochdir = false;
-opt.path:append('**');
-
--- vim.api.keyset.win_config = {
---   border = {"+", "-", "+", "|", "+", "-", "+", "|"}
--- };
--- vim.o.winborder = ["+", "-", "+", "|", "+", "-", "+", "|"];
--- vim.o.winborder = "+,-,+,|,+,-,+,|"
-
--- vim.o.winborder = '+,-,+,|,+,-,+,|'
--- vim.o.winborder = "single"
+vim.o.winborder = "+,-,+,|,+,-,+,|"
+return {
+	border = {"+", "-", "+", "|", "+", "-", "+", "|"};
+}
