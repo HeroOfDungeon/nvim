@@ -2,7 +2,7 @@ return {
   'glacambre/firenvim',
   build = ":call firenvim#install(0)",
   config = function ()
-    blacklist = {
+    local blacklist = {
       "monkeytype.com",
       "cloud.teams.microsoft"
     }
