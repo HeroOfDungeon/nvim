@@ -30,7 +30,9 @@ vim.opt.iskeyword:append("-")
 vim.opt.autochdir = false
 vim.opt.path:append("**")
 
-vim.o.winborder = "+,-,+,|,+,-,+,|"
+local border = {"+", "-", "+", "|", "+", "-", "+", "|"};
+
+vim.o.winborder = table.concat(border, ',');
 return {
-	border = {"+", "-", "+", "|", "+", "-", "+", "|"};
+	border = border;
 }
