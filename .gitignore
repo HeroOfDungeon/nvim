@@ -1,0 +1,4 @@
+.*
+!.gitignore
+lazy-lock.json
+*.disabled
