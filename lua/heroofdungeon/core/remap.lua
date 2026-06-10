@@ -1,5 +1,8 @@
 vim.g.mapleader = " ";
 
+vim.keymap.set("n", "dl", "d2l")
+vim.keymap.set("n", "dh", "d2h")
+
 vim.keymap.set("n", "gj", "<cmd>%!jq .<CR>", { desc = "Format JSON" })
 
 -- Key mappings for tab management
