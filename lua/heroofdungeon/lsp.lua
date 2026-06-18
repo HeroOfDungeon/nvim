@@ -10,7 +10,7 @@ config.servers = { -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/c
   "bashls",                 -- Bash and simiar shells
   "fish_lsp",               -- Fish shell
   "clangd",                 -- C and C++
-  "cmake",                  -- cmake
+--"cmake",                  -- cmake
   "cssls",                  -- CSS and its variants
   "docker_language_server", -- Dockerfile and docker-compose
   "jdtls",                  -- Java
@@ -22,6 +22,7 @@ config.servers = { -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/c
   "html",                   -- HTML
   "csharp_ls",              -- C#
   "rnix",                   -- Nix
+  "emmet_language_server"   -- Emmet
 
   -- Spelling Checkers (LSP)
   -- "codebook",
@@ -32,12 +33,13 @@ config.packages = { -- https://mason-registry.dev/registry/list
   "cbfmt",          -- Formats code blocks in Markdown
 
   -- Formatters
-  "prettier",     -- Angular, CSS, Flow, GraphQL, HTML, JSON, JSX, JavaScript, LESS, Markdown, SCSS, TypeScript, Vue, YAML
+  "prettier",     -- Angular, CSS, Flow, GraphQL, HTML, JSON, JSX, JavaScript, LESS, Markdown, SCSS, TypeScript, Vue and YAML
   "asmfmt",       -- Assembly
   "beautysh",     -- Bash and similar shells
-  "clang-format", -- C, C#, C++, JSON, Java, JavaScript
+  "clang-format", -- C, C#, C++, JSON, Java and JavaScript
   "stylua",       -- Lua
   "taplo",        -- TOML
+  "ruff",         -- Python
   -- "rustfmt",      -- Rust
 
   -- Linters
