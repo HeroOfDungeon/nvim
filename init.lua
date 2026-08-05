@@ -12,7 +12,9 @@ if vim.g.started_by_firenvim == true then
   vim.opt_local.linebreak = true;
 
   -- Change font
-  vim.opt_local.guifont = "Monocraft Nerd Font"
+  vim.opt_local.guifont = "Monocraft Nerd Font";
+
+  vim.cmd.setfiletype("markdown");
 
   -- Write while typing
   vim.api.nvim_create_autocmd({'TextChanged', 'TextChangedI'}, {
