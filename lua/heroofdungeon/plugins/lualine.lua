@@ -87,7 +87,7 @@ return {
 						separator = " ",
 					},
 				},
-				"encoding",
+				-- "encoding",
 				{ "filetype", colored = true },
 			},
 			lualine_y = { "progress" },
