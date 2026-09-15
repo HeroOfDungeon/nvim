@@ -21,12 +21,21 @@ return {
       },
     })
 
-    vim.keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", { desc = "List Git commits" })
-    vim.keymap.set("n", "<leader>gf", "<cmd>Telescope git_files<cr>", { desc = "List Git files" })
-    vim.keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", { desc = "List Git branches" })
+    require("which-key").add({
+      { "<leader>g", group = "Git" }
+    })
 
-    vim.keymap.set("n", "<leader>gB", require("gitsigns").blame, { desc = "Open Git Blame" })
-    vim.keymap.set('n', '<leader>gT', function() require("gitsigns").blame_line({ full = true }) end, { desc = "Open Git Blame for current line"})
-    vim.keymap.set('n', '<leader>G', require("gitsigns").preview_hunk)
+    vim.keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", { desc = "List commits" })
+    vim.keymap.set("n", "<leader>gf", "<cmd>Telescope git_files<cr>", { desc = "List files" })
+    -- vim.keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", { desc = "List branches" })
+
+    vim.keymap.set('n', '<leader>gw', require("gitsigns").toggle_word_diff, { desc = "Toggle word diff" })
+    vim.keymap.set("n", "<leader>gb", require("gitsigns").blame, { desc = "Open Blame" })
+    vim.keymap.set('n', '<leader>gl', function() require("gitsigns").blame_line({ full = true }) end, { desc = "Open Blame for current line"})
+    vim.keymap.set('n', '<leader>gs', function() require("gitsigns").diff("main") end, { desc = "Open current status"})
+    vim.keymap.set('n', '<leader>gr', function()
+      os.execute("git fetch origin/main")
+      require("gitsigns").diffthis("origin/main")
+    end, { desc = "Diff current file with remote" })
 	end,
 }
