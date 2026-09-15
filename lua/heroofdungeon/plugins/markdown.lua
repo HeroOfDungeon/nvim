@@ -1,19 +1,38 @@
 return {
-	"MeanderingProgrammer/render-markdown.nvim",
 	{
-		"StefanBartl/markdown.nvim",
-		dependencies = { "StefanBartl/lib.nvim" },
-		ft = { "markdown", "mdx", "md" },
-    features = {
-      disable = {
-        "preview", "mdview", "create", "scope",
-        "fold", "tableview"
-      }
-    },
-		config = function()
-			require("markdown").setup()
-		end,
-	},
+    "MeanderingProgrammer/render-markdown.nvim",
+
+    config = function ()
+      require("render-markdown").setup({
+        render_modes = { 'n', 'c', 'i' },
+        completions = {
+          lsp = {
+            enabled = true
+          }
+        },
+        sign = {
+          enabled = false
+        },
+        code = {
+          style = "full"
+        }
+      })
+    end
+  },
+	-- {
+	-- 	"StefanBartl/markdown.nvim",
+	-- 	dependencies = { "StefanBartl/lib.nvim" },
+	-- 	ft = { "markdown", "mdx", "md" },
+	--    features = {
+	--      disable = {
+	--        "preview", "mdview", "create", "scope",
+	--        "fold", "tableview"
+	--      }
+	--    },
+	-- 	config = function()
+	-- 		require("markdown").setup()
+	-- 	end,
+	-- },
   -- {
   -- "StefanBartl/pdfport.nvim",
   --   dependencies = { "StefanBartl/lib.nvim" },
