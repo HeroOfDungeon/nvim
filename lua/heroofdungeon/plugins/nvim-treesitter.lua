@@ -1,0 +1,46 @@
+return {
+  "nvim-treesitter/nvim-treesitter",
+  lazy = false,
+  build = ":TSUpdate",
+  config = function ()
+    require("nvim-treesitter").install({
+      -- Command to get all these:
+      -- rg -e '^```[a-z]+$' (rg --files . | rg -e "[a-zA-Z]+\.md") -I --trim | sort -u | sed "s/^```//" | sed 's/$/",/' | sed 's/^/"/'
+      "bash",
+      "c",
+      "cpp",
+      "css",
+      "csv",
+      "cmake",
+      "diff",
+      "dockerfile",
+      "fish",
+      "gitattributes",
+      "gitignore",
+      "go",
+      "haskell",
+      "html",
+      "http",
+      "java",
+      "javascript",
+      "json",
+      "lua",
+      "make",
+      "mermaid",
+      "nginx",
+      "nix",
+      "powershell",
+      "python",
+      "regex",
+      "swift",
+      "sql",
+      "toml",
+      "tsx",
+      "typescript",
+      "vim",
+      "xml",
+      "yaml",
+      "zsh",
+    })
+  end
+}
