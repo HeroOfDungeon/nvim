@@ -23,6 +23,8 @@ local checkboxes = {
 	unchecked = "o",
 }
 
+local quote = ">"
+
 return {
 	lsp_symbols = {
 		error = "!",
@@ -56,4 +58,5 @@ return {
 	grid = grid,
 	bullets = bullets,
 	checkboxes = checkboxes,
+  quote = quote,
 }

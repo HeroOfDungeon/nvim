@@ -38,6 +38,7 @@ return {
 					},
 				},
 				quote = {
+          icon = require("heroofdungeon.core.chars").quote,
 					repeat_linebreak = true,
 				},
 				pipe_table = {
