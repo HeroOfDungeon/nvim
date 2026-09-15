@@ -10,7 +10,8 @@ config.servers = { -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/c
   "bashls",                 -- Bash and simiar shells
   "fish_lsp",               -- Fish shell
   "clangd",                 -- C and C++
---"cmake",                  -- cmake
+  "neocmake",               -- cmake
+  "hls",                    -- Haskell
   "cssls",                  -- CSS and its variants
   "docker_language_server", -- Dockerfile and docker-compose
   "jdtls",                  -- Java
@@ -20,7 +21,7 @@ config.servers = { -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/c
   "rust_analyzer",          -- Rust
   "ts_ls",                  -- JavaScript and TypeScript
   "html",                   -- HTML
-  "csharp_ls",              -- C#
+  "roslyn_ls",              -- C#
   "rnix",                   -- Nix
   "emmet_language_server"   -- Emmet
 
@@ -41,11 +42,13 @@ config.packages = { -- https://mason-registry.dev/registry/list
   "taplo",        -- TOML
   "ruff",         -- Python
   -- "rustfmt",      -- Rust
+  "ormolu",       -- Haskell
 
   -- Linters
   "eslint_d", -- Fast linter for JavaScript and TypeScript
   "pylint",   -- Python
   "ty",       -- Python types
+  "hlint",    -- Haskell
 }
 
 config.setup = function()
@@ -58,10 +61,10 @@ config.setup = function()
     severity_sort = true,
     signs = {
       text = {
-        [vim.diagnostic.severity.ERROR] = "! ",
-        [vim.diagnostic.severity.WARN]  = "? ",
-        [vim.diagnostic.severity.HINT]  = "H ",
-        [vim.diagnostic.severity.INFO]  = "I ",
+        [vim.diagnostic.severity.ERROR] = require("heroofdungeon.core.options").lsp_symbols.error,
+        [vim.diagnostic.severity.WARN]  = require("heroofdungeon.core.options").lsp_symbols.warn,
+        [vim.diagnostic.severity.HINT]  = require("heroofdungeon.core.options").lsp_symbols.hint,
+        [vim.diagnostic.severity.INFO]  = require("heroofdungeon.core.options").lsp_symbols.info,
       },
     },
   });
