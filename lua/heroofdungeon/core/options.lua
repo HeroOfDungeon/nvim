@@ -34,5 +34,11 @@ local border = {"+", "-", "+", "|", "+", "-", "+", "|"};
 
 vim.o.winborder = table.concat(border, ',');
 return {
+  lsp_symbols = {
+    error = "!",
+    warn = "?",
+    hint = "H",
+    info = "I",
+  },
 	border = border;
 }
