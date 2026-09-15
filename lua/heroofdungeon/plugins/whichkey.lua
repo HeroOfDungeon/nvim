@@ -10,7 +10,9 @@ return {
 			},
 		},
 		icons = {
-			seperator = "=>",
+      separator = ">",
+      mappings = false,
+			-- seperator = "=>",
 		},
 	},
 	-- keys = {
