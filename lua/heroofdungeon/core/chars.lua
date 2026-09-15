@@ -25,6 +25,15 @@ local checkboxes = {
 
 local quote = ">"
 
+local git_icons = {
+  add = "+",
+  change = "|",
+  delete = "-",
+  topdelete = "-",
+  changedelete = "~",
+  untracked = "¦"
+}
+
 return {
 	lsp_symbols = {
 		error = "!",
@@ -59,4 +68,5 @@ return {
 	bullets = bullets,
 	checkboxes = checkboxes,
   quote = quote,
+  git_icons = git_icons,
 }
