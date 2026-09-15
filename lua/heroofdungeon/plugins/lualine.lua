@@ -53,10 +53,10 @@ return {
 				{
 					"diagnostics",
 					symbols = {
-						error = "!",
-						warn = "?",
-						hint = "H",
-						info = "I",
+						error = require("heroofdungeon.core.options").lsp_symbols.error,
+						warn = require("heroofdungeon.core.options").lsp_symbols.warn,
+						hint = require("heroofdungeon.core.options").lsp_symbols.hint,
+						info = require("heroofdungeon.core.options").lsp_symbols.info,
 					},
 				},
 			},
@@ -79,8 +79,8 @@ return {
 					"lsp_status",
 					icon = "*",
 					symbols = {
-						-- Standard unicode symbols to cycle through for LSP progress:
-						spinner = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" },
+						-- spinner = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" },
+            spinner = { "-", "\\", "|", "/"},
 						-- Standard unicode symbol for when LSP is done:
 						done = "",
 						-- Delimiter inserted between LSP names:
