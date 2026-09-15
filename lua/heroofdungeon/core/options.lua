@@ -30,15 +30,61 @@ vim.opt.iskeyword:append("-")
 vim.opt.autochdir = false
 vim.opt.path:append("**")
 
-local border = {"+", "-", "+", "|", "+", "-", "+", "|"};
+local grid = {
+	top_left = "+",
+	top = "+",
+	top_right = "+",
+	right = "+",
+	center = "+",
+	left = "+",
+	bottom_left = "+",
+	bottom = "+",
+	bottom_right = "+",
+	horizontal = "-",
+	horizontal_special = "~",
+	vertical = "|",
+}
 
-vim.o.winborder = table.concat(border, ',');
+local border = {
+	grid.top_right,
+	grid.horizontal,
+	grid.top_left,
+	grid.vertical,
+	grid.bottom_left,
+	grid.horizontal,
+	grid.bottom_right,
+	grid.vertical,
+}
+
+vim.o.winborder = table.concat(border, ",")
 return {
-  lsp_symbols = {
-    error = "!",
-    warn = "?",
-    hint = "H",
-    info = "I",
-  },
-	border = border;
+	lsp_symbols = {
+		error = "!",
+		warn = "?",
+		hint = "H",
+		info = "I",
+	},
+	border = border,
+	table_border = {
+		grid.top_left,
+		grid.top,
+		grid.top_right,
+		grid.right,
+		grid.center,
+		grid.left,
+		grid.bottom_left,
+		grid.bottom,
+		grid.bottom_right,
+		grid.horizontal,
+		grid.vertical,
+	},
+	grid = grid,
+	bullets = {
+		"-",
+		"*",
+	},
+	checkboxes = {
+		checked = "x",
+		unchecked = "o",
+	},
 }
