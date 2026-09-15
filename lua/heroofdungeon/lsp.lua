@@ -61,10 +61,10 @@ config.setup = function()
     severity_sort = true,
     signs = {
       text = {
-        [vim.diagnostic.severity.ERROR] = require("heroofdungeon.core.options").lsp_symbols.error,
-        [vim.diagnostic.severity.WARN]  = require("heroofdungeon.core.options").lsp_symbols.warn,
-        [vim.diagnostic.severity.HINT]  = require("heroofdungeon.core.options").lsp_symbols.hint,
-        [vim.diagnostic.severity.INFO]  = require("heroofdungeon.core.options").lsp_symbols.info,
+        [vim.diagnostic.severity.ERROR] = require("heroofdungeon.core.chars").lsp_symbols.error,
+        [vim.diagnostic.severity.WARN]  = require("heroofdungeon.core.chars").lsp_symbols.warn,
+        [vim.diagnostic.severity.HINT]  = require("heroofdungeon.core.chars").lsp_symbols.hint,
+        [vim.diagnostic.severity.INFO]  = require("heroofdungeon.core.chars").lsp_symbols.info,
       },
     },
   });

@@ -4,7 +4,7 @@ return {
 	opts = {
 		preset = "helix",
 		win = {
-			border = require("heroofdungeon.core.options").border,
+			border = require("heroofdungeon.core.chars").border,
 			height = {
 				max = 30,
 			},

@@ -8,7 +8,7 @@ return {
 	config = function()
 		require("telescope").setup({
 			defaults = {
-				borderchars = require("heroofdungeon.core.options").border,
+				borderchars = require("heroofdungeon.core.chars").border,
 			},
 		})
 		local telescope = require("telescope")

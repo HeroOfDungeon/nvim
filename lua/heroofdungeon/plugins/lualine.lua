@@ -53,10 +53,10 @@ return {
 				{
 					"diagnostics",
 					symbols = {
-						error = require("heroofdungeon.core.options").lsp_symbols.error,
-						warn = require("heroofdungeon.core.options").lsp_symbols.warn,
-						hint = require("heroofdungeon.core.options").lsp_symbols.hint,
-						info = require("heroofdungeon.core.options").lsp_symbols.info,
+						error = require("heroofdungeon.core.chars").lsp_symbols.error,
+						warn = require("heroofdungeon.core.chars").lsp_symbols.warn,
+						hint = require("heroofdungeon.core.chars").lsp_symbols.hint,
+						info = require("heroofdungeon.core.chars").lsp_symbols.info,
 					},
 				},
 			},

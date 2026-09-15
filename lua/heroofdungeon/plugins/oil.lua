@@ -8,16 +8,16 @@ return {
 			watch_for_changes = true,
       -- In case i ever see a rounded border within oil
       -- float = {
-      --   border = require("heroofdungeon.core.options").border,
+      --   border = require("heroofdungeon.core.chars").border,
       -- },
       -- configuration = {
-      --   border = require("heroofdungeon.core.options").border,
+      --   border = require("heroofdungeon.core.chars").border,
       -- },
       -- progress = {
-      --   border = require("heroofdungeon.core.options").border,
+      --   border = require("heroofdungeon.core.chars").border,
       -- },
       -- keymaps_help = {
-      --   border = require("heroofdungeon.core.options").border,
+      --   border = require("heroofdungeon.core.chars").border,
       -- },
 			view_options = {
 				show_hidden = true,

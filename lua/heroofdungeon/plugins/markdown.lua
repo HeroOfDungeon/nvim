@@ -23,17 +23,17 @@ return {
 					border = "thick",
 				},
 				dash = {
-					icon = require("heroofdungeon.core.options").grid.horizontal,
+					icon = require("heroofdungeon.core.chars").grid.horizontal,
 				},
 				bullet = {
-					icons = require("heroofdungeon.core.options").bullets,
+					icons = require("heroofdungeon.core.chars").bullets,
 				},
 				checkbox = {
 					unchecked = {
-						icon = require("heroofdungeon.core.options").checkboxes.unchecked,
+						icon = require("heroofdungeon.core.chars").checkboxes.unchecked,
 					},
 					checked = {
-						icon = require("heroofdungeon.core.options").checkboxes.checked,
+						icon = require("heroofdungeon.core.chars").checkboxes.checked,
 						scope_highlight = "@markup.strikethrough",
 					},
 				},
@@ -43,12 +43,12 @@ return {
 				pipe_table = {
 					style = "normal",
 					cell = "trimmed",
-					border = require("heroofdungeon.core.options").table_border,
-					alignment_indicator = require("heroofdungeon.core.options").grid.horizontal_special,
+					border = require("heroofdungeon.core.chars").table_border,
+					alignment_indicator = require("heroofdungeon.core.chars").grid.horizontal_special,
 				},
 				indent = {
 					enabled = true,
-					icon = require("heroofdungeon.core.options").grid.vertical,
+					icon = require("heroofdungeon.core.chars").grid.vertical,
 				},
 			})
 		end,
