@@ -38,7 +38,3 @@ end
 
 -- Rebind U to redo (Ctrl + R)
 vim.keymap.set("n", "U", "<C-r>", { noremap = true, silent = true })
-
-vim.keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", { desc = "List Git commits" })
-vim.keymap.set("n", "<leader>gf", "<cmd>Telescope git_files<cr>", { desc = "List Git files" })
-vim.keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", { desc = "List Git branches" })
