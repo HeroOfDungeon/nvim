@@ -80,10 +80,10 @@ config.setup = function()
       -- keymap.set("n", "gt", ":Telescope lsp_type_definitions<cr>");
 
       require("which-key").add({
-        { "<leader>l", group = "LSP" }
+        { "<leader>r", group = "LSP" }
       })
 
-      vim.keymap.set("n", "<leader>lf", function()
+      vim.keymap.set("n", "<leader>rf", function()
         vim.lsp.buf.format({
           tabSize = 2,
           insertSpaces = true,
@@ -91,16 +91,16 @@ config.setup = function()
           trimFinalNewlines = true,
         })
       end, { desc = "Format buffer" });
-      vim.keymap.set({ "n", "v" }, "<leader>la", function()
+      vim.keymap.set({ "n", "v" }, "<leader>ra", function()
         vim.lsp.buf.code_action();
       end, { desc = "Code action" });
       -- keymap.set("n", "<leader>rT", function ()
       --   vim.lsp.buf.typehierarchy("subtypes");
       -- end, { desc = "Show typehierarchy" });
-      vim.keymap.set("n", "<leader>lt", vim.lsp.buf.hover, { desc = "Show type" });
-      vim.keymap.set("n", "<leader>ln", vim.lsp.buf.rename, { desc = "Rename symbol below cursor" });
-      vim.keymap.set("n", "<leader>ls", ":lsp restart<cr>", { desc = "Restart LSP" })
-      vim.keymap.set("n", "<leader>ld", function()
+      vim.keymap.set("n", "<leader>rt", vim.lsp.buf.hover, { desc = "Show type" });
+      vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol below cursor" });
+      vim.keymap.set("n", "<leader>rs", ":lsp restart<cr>", { desc = "Restart LSP" })
+      vim.keymap.set("n", "<leader>rd", function()
         diagnostics_active = not diagnostics_active;
         vim.diagnostic.config({
           virtual_text = diagnostics_active,
