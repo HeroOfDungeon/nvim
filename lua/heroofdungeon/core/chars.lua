@@ -25,13 +25,31 @@ local checkboxes = {
 
 local quote = ">"
 
+local tree = {
+  line = "|",
+  branch = "+",
+  last = "`",
+  folder_closed = "o",
+  folder_open = "u",
+  folder_empty = "u",
+  expander_collapsed = "-",
+  expander_expanded = "+",
+}
+
 local git_icons = {
-  add = "+",
-  change = "|",
-  delete = "-",
+  added = "+",
+  renamed = "~",
+  changed = "*",
+  changed_mark = "|",
+  deleted = "-",
   topdelete = "-",
   changedelete = "~",
-  untracked = "¦"
+  untracked = "?",
+  untracked_mark = "¦",
+  ignored = "@",
+  unstaged = "v",
+  staged = "^",
+  conflict = "!"
 }
 
 return {
@@ -69,4 +87,5 @@ return {
 	checkboxes = checkboxes,
   quote = quote,
   git_icons = git_icons,
+  tree = tree,
 }

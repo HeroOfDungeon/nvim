@@ -4,20 +4,20 @@ return {
 	config = function()
 		require("gitsigns").setup({
       signs = {
-        add          = { text = require("heroofdungeon.core.chars").git_icons.add },
-        change       = { text = require("heroofdungeon.core.chars").git_icons.change },
-        delete       = { text = require("heroofdungeon.core.chars").git_icons.delete },
+        add          = { text = require("heroofdungeon.core.chars").git_icons.added },
+        change       = { text = require("heroofdungeon.core.chars").git_icons.changed_mark },
+        delete       = { text = require("heroofdungeon.core.chars").git_icons.deleted },
         topdelete    = { text = require("heroofdungeon.core.chars").git_icons.topdelete },
         changedelete = { text = require("heroofdungeon.core.chars").git_icons.changedelete },
-        untracked    = { text = require("heroofdungeon.core.chars").git_icons.untracked },
+        untracked    = { text = require("heroofdungeon.core.chars").git_icons.untracked_mark },
       },
       signs_staged = {
-        add          = { text = require("heroofdungeon.core.chars").git_icons.add },
-        change       = { text = require("heroofdungeon.core.chars").git_icons.change },
-        delete       = { text = require("heroofdungeon.core.chars").git_icons.delete },
+        add          = { text = require("heroofdungeon.core.chars").git_icons.added },
+        change       = { text = require("heroofdungeon.core.chars").git_icons.changed_mark },
+        delete       = { text = require("heroofdungeon.core.chars").git_icons.deleted },
         topdelete    = { text = require("heroofdungeon.core.chars").git_icons.topdelete },
         changedelete = { text = require("heroofdungeon.core.chars").git_icons.changedelete },
-        untracked    = { text = require("heroofdungeon.core.chars").git_icons.untracked },
+        untracked    = { text = require("heroofdungeon.core.chars").git_icons.untracked_mark },
       },
     })
 
