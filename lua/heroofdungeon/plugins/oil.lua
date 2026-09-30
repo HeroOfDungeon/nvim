@@ -6,19 +6,19 @@ return {
 			skip_confirm_for_simple_edits = true,
 			prompt_save_on_select_new_entry = false,
 			watch_for_changes = true,
-      -- In case i ever see a rounded border within oil
-      -- float = {
-      --   border = require("heroofdungeon.core.chars").border,
-      -- },
-      -- configuration = {
-      --   border = require("heroofdungeon.core.chars").border,
-      -- },
-      -- progress = {
-      --   border = require("heroofdungeon.core.chars").border,
-      -- },
-      -- keymaps_help = {
-      --   border = require("heroofdungeon.core.chars").border,
-      -- },
+			-- In case i ever see a rounded border within oil
+			-- float = {
+			--   border = require("heroofdungeon.core.chars").border,
+			-- },
+			-- configuration = {
+			--   border = require("heroofdungeon.core.chars").border,
+			-- },
+			-- progress = {
+			--   border = require("heroofdungeon.core.chars").border,
+			-- },
+			-- keymaps_help = {
+			--   border = require("heroofdungeon.core.chars").border,
+			-- },
 			view_options = {
 				show_hidden = true,
 				natural_order = true,
@@ -27,8 +27,10 @@ return {
 				end,
 			},
 		})
-		vim.keymap.set("n", "<leader>e", ":set nosplitright | vsplit | vertical resize 40 | Oil . | set splitright<cr>")
-		vim.keymap.set("n", "<leader>e", ":Oil<cr>")
 	end,
-	lazy = false,
+	keys = {
+		{ "<leader>e", ":set nosplitright | vsplit | vertical resize 40 | Oil . | set splitright<cr>", desc = "Open Oil" }, -- Overwritten by rule below
+		{ "<leader>e", "<CMD>Oil<CR>", desc = "Open Oil" },
+	},
+	cmd = "Oil",
 }
