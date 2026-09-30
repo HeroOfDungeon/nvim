@@ -5,8 +5,6 @@ vim.keymap.set("n", "dh", "d2h")
 
 vim.cmd(":cnoreabbrev qq q!")
 
-vim.keymap.set("n", "gj", "<cmd>%!jq .<CR>", { desc = "Format JSON" })
-
 -- Key mappings for tab management
 vim.keymap.set("n", "<C-t>", "<cmd>tabnew<CR>", { desc = "New tab" })
 vim.keymap.set("n", "<C-w>", "<cmd>tabclose!<CR>", { noremap = true, silent = true, desc = "Close current tab" })
