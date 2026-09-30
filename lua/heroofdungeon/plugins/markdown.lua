@@ -1,7 +1,10 @@
 return {
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
-    ft = "markdown",
+		dependencies = {
+			{ "3rd/image.nvim", lazy = true },
+		},
+		ft = "markdown",
 
 		config = function()
 			require("render-markdown").setup({
@@ -39,7 +42,7 @@ return {
 					},
 				},
 				quote = {
-          icon = require("heroofdungeon.core.chars").quote,
+					icon = require("heroofdungeon.core.chars").quote,
 					repeat_linebreak = true,
 				},
 				pipe_table = {
