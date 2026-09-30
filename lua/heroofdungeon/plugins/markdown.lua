@@ -21,6 +21,7 @@ return {
 					enabled = false,
 				},
 				code = {
+          language_icon = require("heroofdungeon.core.options").icons,
 					width = "block",
 					-- left_pad = 2,
 					right_pad = 2,

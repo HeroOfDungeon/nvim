@@ -31,3 +31,7 @@ vim.opt.autochdir = false
 vim.opt.path:append("**")
 
 vim.o.winborder = table.concat(require("heroofdungeon.core.chars").border, ",")
+
+return {
+  icons = false
+}
