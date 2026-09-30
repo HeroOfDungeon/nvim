@@ -59,3 +59,6 @@ else
   })
 end
 
+require("which-key").add({
+	{ "<leader>c", group = "Colorscheme" },
+})
